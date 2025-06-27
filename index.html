@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grow a Garden Pet Values</title>
+  <meta name="description" content="A complete Roblox Grow a Garden pet value tracker. View accurate pet values, demand ratings, and stay updated on trading trends — all in one dark-themed, searchable site.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="banner">
+    <img src="gagvat_banner_with_title.png" alt="Grow a Garden Pet Values Banner">
+  </div>
+  <div class="container">
+    <h1>Grow a Garden Pet Values</h1>
+    <p class="subtitle">Live Value & Trading Guide for Grow a Garden Pets</p>
+
+    <input type="text" id="searchInput" placeholder="Search for a pet...">
+
+    <div class="sort-buttons">
+      <button onclick="sortPets('value', 'asc')">Sort by Value ↑</button>
+      <button onclick="sortPets('value', 'desc')">Sort by Value ↓</button>
+      <button onclick="sortPets('demand', 'asc')">Sort by Demand ↑</button>
+      <button onclick="sortPets('demand', 'desc')">Sort by Demand ↓</button>
+    </div>
+
+    <table id="valuesTable">
+      <thead>
+        <tr>
+          <th>Pet Name</th>
+          <th>Value</th>
+          <th>Demand</th><th>Trading Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

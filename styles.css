@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grow a Garden Pet Values</title>
+  <meta name="description" content="A complete Roblox Grow a Garden pet value tracker. View accurate pet values, demand ratings, and stay updated on trading trends — all in one dark-themed, searchable site.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="banner">
+    <img src="gagvat_banner_with_title.png" alt="Grow a Garden Pet Values Banner">
+  </div>
+  <div class="container">
+    <h1>Grow a Garden Pet Values</h1>
+    <p class="subtitle">Live Value & Trading Guide for Grow a Garden Pets</p>
+
+    <input type="text" id="searchInput" placeholder="Search for a pet...">
+
+    <div class="sort-buttons">
+      <button onclick="sortPets('value', 'asc')">Sort by Value ↑</button>
+      <button onclick="sortPets('value', 'desc')">Sort by Value ↓</button>
+      <button onclick="sortPets('demand', 'asc')">Sort by Demand ↑</button>
+      <button onclick="sortPets('demand', 'desc')">Sort by Demand ↓</button>
+    </div>
+
+    <table id="valuesTable">
+      <thead>
+        <tr>
+          <th>Pet Name</th>
+          <th>Value</th>
+          <th>Demand</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated by script.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: #ffd700;
+  margin: 20px 0;
+}
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 auto 20px auto;
+  display: block;
+  background-color: #222;
+  color: #fff;
+  font-size: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+th {
+  background-color: #222;
+  color: #ffd700;
+  text-transform: uppercase;
+}
+td {
+  color: #eee;
+}
+tr:hover {
+  background-color: #222;
+}
+.sort-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sort-buttons button {
+  background-color: #222;
+  color: #ffd700;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.sort-buttons button:hover {
+  background-color: #333;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+.status.over {
+  background: #0f0;
+  color: #000;
+}
+.status.fair {
+  background: #aaa;
+  color: #000;
+}
+.status.under {
+  background: #c00;
+  color: #fff;
+}
